@@ -1,0 +1,23 @@
+{% extends "AppSabba/padre.html" %}
+<!-- transferido de ... -->
+<!-- extends es como un import y copia todo el archivo html -->
+
+<!-- de inicio, aca modifico solo esa parte -->
+{% block titulo %}
+Resultados de la busqueda.
+{% endblock %} 
+
+
+<!-- ----------------------------------------- -->
+{% block formulario %}
+<!-- <p> {{apellido}}: </p> -->
+
+<ul>
+{% for c in resultado %}
+    <li>Nombre: {{c.nombre}} // Comision: {{c.comision}} </li>
+{% endfor %}
+</ul>
+
+
+
+{% endblock %} 

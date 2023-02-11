@@ -1,0 +1,21 @@
+{% extends "AppSabba/padre.html" %}
+<!-- transferido de ... -->
+<!-- extends es como un import y copia todo el archivo html -->
+
+{% block titulo %}
+Profesores disponibles.
+{% endblock %} 
+
+
+<!-- --------- BLOQUE APARTE ------------ -->
+{% block formulario %}
+
+
+{% for x in listaProfesores %}
+    <p style="font-weight: bold ; text-align: center ; font-size: 20px;"> {{x.nombre}} {{x.apellido}} 
+        // Profesion: {{x.profesion}}</p>
+{% endfor %}
+
+
+
+{% endblock %}

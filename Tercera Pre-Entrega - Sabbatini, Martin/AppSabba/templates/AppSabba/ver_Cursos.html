@@ -1,0 +1,32 @@
+{% extends "AppSabba/padre.html" %}
+<!-- transferido de ... -->
+<!-- extends es como un import y copia todo el archivo html -->
+
+{% block titulo %}
+Cursos Disponibles.
+{% endblock %} 
+
+
+
+<!-- --------- BLOQUE BOTONES ------------ -->
+{% block botones %}
+<nav class="navbar navbar-light bg-light static-top">
+    <div class="container" style="justify-content: center;">
+        <a class="btn btn-primary" href="{% url 'Buscar Curso' %}">Buscar</a>
+    </div>
+</nav>
+{% endblock %}
+
+
+
+<!-- --------- BLOQUE LISTA ------------ -->
+{% block formulario %}
+
+
+{% for curso in listaCursos %}
+    <p style="font-weight: bold ; text-align: center ; font-size: 20px;"> {{curso.nombre}} </p>
+{% endfor %}
+
+
+
+{% endblock %}

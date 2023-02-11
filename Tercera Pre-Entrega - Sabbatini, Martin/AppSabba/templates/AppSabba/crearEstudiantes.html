@@ -1,0 +1,21 @@
+{% extends "AppSabba/padre.html" %}
+<!-- transferido de ... -->
+<!-- extends es como un import y copia todo el archivo html -->
+
+{% block titulo %}
+Formulario de Inscripcion
+{% endblock %} 
+
+
+<!-- lo ubicamos por debajo del titulo -->
+{% block formulario %}
+<form action="" method="POST "> {% csrf_token %}
+
+    {{formulario1.as_p}}
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Resetear">
+</form>
+ 
+ <!-- {% csrf_token %} variable que permite modificar cosas -->
+{% endblock %} 

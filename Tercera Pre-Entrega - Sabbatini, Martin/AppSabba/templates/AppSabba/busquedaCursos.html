@@ -1,0 +1,25 @@
+{% extends "AppSabba/padre.html" %}
+<!-- transferido de ... -->
+<!-- extends es como un import y copia todo el archivo html -->
+
+<!-- de inicio, aca modifico solo esa parte -->
+{% block titulo %}
+Encuentra tu curso.
+{% endblock %} 
+
+
+
+<!-- lo ubicamos por debajo del titulo -->
+{% block formulario %}
+
+<form action="/AppSabba/resultado_busqueda_cursos/" method="GET">
+    <!-- me manda a la pagina resultados busqueda de cursos -->
+        <p style="font-weight: bold; font-size: 18px;">Nombre del curso:</p>
+        <input type="text" name="nombre">
+    
+        <input type="submit" value="Buscar">
+    
+    </form>
+    
+    {% endblock %} 
+    <!-- lo heredo de inicio -->
